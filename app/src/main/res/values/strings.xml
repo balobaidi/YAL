@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">YAL</string>
+    <string name="acid">531824153093-jmsvnklt0e3ksroi7c1c7218n0mui91q.apps.googleusercontent.com</string>
+    <string name="button">Sign Out</string>
+    <string name="gs_start">gs start</string>
+    <string name="sign_out">signed out</string>
+    <string name="failed">failed</string>
+    <string name="Auth_failed">Authentication Failed!</string>
+    <string name="auth_succeeded">Authentication Succeeded!</string>
+    <string name="play">Play</string>
+</resources>
