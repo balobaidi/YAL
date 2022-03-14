@@ -32,9 +32,6 @@ public class Defence extends AppCompatActivity {
 
     private ConstraintLayout rootNode;
 
-    private ImageView qw;
-    private static final String IMAGWVIEW_TAG = "tank_permanent";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,9 +39,6 @@ public class Defence extends AppCompatActivity {
 
         coor = new Coor(this);
         coorToView = new CoorToView(this);
-
-        qw = findViewById(R.id.ass);
-        qw.setTag(IMAGWVIEW_TAG);
 
         rootNode = findViewById(R.id.zz);
         DragListenerSetter.setDragListener(rootNode, coor, coorToView);
@@ -63,43 +57,11 @@ public class Defence extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        qw.setOnLongClickListener(v-> {
-            ClipData.Item item = new ClipData.Item((CharSequence) qw.getTag());
-            ClipData dragData = new ClipData((CharSequence) qw.getTag(), new String[] {ClipDescription.MIMETYPE_TEXT_PLAIN}, item);
-
-            View.DragShadowBuilder myShadow = new MyDragShadowBuilder(qw);
-            v.startDragAndDrop(dragData, myShadow, null, 0);
-
-            return true;
-        });
-    }
-
-    private static class MyDragShadowBuilder extends View.DragShadowBuilder {
-
-        private static Drawable shadow;
-
-        public MyDragShadowBuilder(View v) {
-            super(v);
-            shadow = new ColorDrawable(Color.LTGRAY);
-        }
-
-        @Override
-        public void onProvideShadowMetrics (Point size, Point touch) {
-
-            int width, height;
-
-            width = getView().getWidth();
-            height = getView().getHeight();
-
-            shadow.setBounds(0, 0, width, height);
-            size.set(width, height);
-            touch.set(width / 2, height / 2);
-        }
-
-        @Override
-        public void onDrawShadow(Canvas canvas) {
-            shadow.draw(canvas);
-        }
+        MyUnits tank = new MyUnits(findViewById(R.id.TANK), 5, "tank");
+        MyUnits jet = new MyUnits(findViewById(R.id.JET), 5, "jet");
+        MyUnits canon = new MyUnits(findViewById(R.id.CANON), 3, "canon");
+        MyUnits frigate = new MyUnits(findViewById(R.id.FRIGATE), 3, "frigate");
+        MyUnits submarine = new MyUnits(findViewById(R.id.SUBMARINE), 2, "submarine");
     }
 
     private void listenToUserDocument(DocumentReference userDocumentPath) {

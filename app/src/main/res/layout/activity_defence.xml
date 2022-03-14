@@ -9,12 +9,55 @@
     tools:context=".Defence">
 
     <ImageView
-        android:id="@+id/ass"
+        android:id="@+id/TANK"
         android:layout_width="38dp"
         android:layout_height="38dp"
-        app:srcCompat="@drawable/tank"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="78dp" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:tag="TANK"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tank" />
+
+    <ImageView
+        android:id="@+id/JET"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="32dp"
+        android:tag="JET"
+        app:layout_constraintStart_toEndOf="@+id/TANK"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/jet" />
+
+    <ImageView
+        android:id="@+id/CANON"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="32dp"
+        android:tag="CONON"
+        app:layout_constraintStart_toEndOf="@+id/JET"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/canon" />
+
+    <ImageView
+        android:id="@+id/FRIGATE"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="32dp"
+        android:tag="FRIGATE"
+        app:layout_constraintStart_toEndOf="@+id/CANON"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/frigate" />
+
+    <ImageView
+        android:id="@+id/SUBMARINE"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="32dp"
+        android:tag="SUBMARINE"
+        app:layout_constraintStart_toEndOf="@+id/FRIGATE"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/submarine" />
 
     <ImageView
         android:id="@+id/q1"
@@ -23,6 +66,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="172dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/oo" />
@@ -33,6 +77,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="172dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q1"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/oo" />
@@ -43,6 +88,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="172dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q2"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/oo" />
@@ -53,6 +99,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="172dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q3"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/oo" />
@@ -63,6 +110,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="172dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q4"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/oo" />
@@ -73,6 +121,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="172dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q5"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/oo" />
@@ -83,6 +132,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="172dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q6"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/oo" />
@@ -93,6 +143,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="172dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q7"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/oo" />
@@ -103,6 +154,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="172dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q8"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/oo" />
@@ -113,6 +165,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="172dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q9"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/oo" />
@@ -123,6 +176,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/q1"
         app:srcCompat="@drawable/oo" />
@@ -132,6 +186,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q11"
         app:layout_constraintTop_toBottomOf="@+id/q2"
         app:srcCompat="@drawable/oo" />
@@ -141,6 +196,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q12"
         app:layout_constraintTop_toBottomOf="@+id/q3"
         app:srcCompat="@drawable/oo" />
@@ -150,6 +206,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q13"
         app:layout_constraintTop_toBottomOf="@+id/q4"
         app:srcCompat="@drawable/oo" />
@@ -159,6 +216,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q14"
         app:layout_constraintTop_toBottomOf="@+id/q5"
         app:srcCompat="@drawable/oo" />
@@ -168,6 +226,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q15"
         app:layout_constraintTop_toBottomOf="@+id/q6"
         app:srcCompat="@drawable/oo" />
@@ -177,6 +236,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q16"
         app:layout_constraintTop_toBottomOf="@+id/q7"
         app:srcCompat="@drawable/oo" />
@@ -186,6 +246,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q17"
         app:layout_constraintTop_toBottomOf="@+id/q8"
         app:srcCompat="@drawable/oo" />
@@ -195,6 +256,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q18"
         app:layout_constraintTop_toBottomOf="@+id/q9"
         app:srcCompat="@drawable/oo" />
@@ -204,6 +266,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q19"
         app:layout_constraintTop_toBottomOf="@+id/q10"
         app:srcCompat="@drawable/oo" />
@@ -214,6 +277,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/q11"
         app:srcCompat="@drawable/oo" />
@@ -223,6 +287,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q21"
         app:layout_constraintTop_toBottomOf="@+id/q12"
         app:srcCompat="@drawable/oo" />
@@ -232,6 +297,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q22"
         app:layout_constraintTop_toBottomOf="@+id/q13"
         app:srcCompat="@drawable/oo" />
@@ -241,6 +307,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q23"
         app:layout_constraintTop_toBottomOf="@+id/q14"
         app:srcCompat="@drawable/oo" />
@@ -250,6 +317,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q24"
         app:layout_constraintTop_toBottomOf="@+id/q15"
         app:srcCompat="@drawable/oo" />
@@ -259,6 +327,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q25"
         app:layout_constraintTop_toBottomOf="@+id/q16"
         app:srcCompat="@drawable/oo" />
@@ -268,6 +337,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q26"
         app:layout_constraintTop_toBottomOf="@+id/q17"
         app:srcCompat="@drawable/oo" />
@@ -277,6 +347,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q27"
         app:layout_constraintTop_toBottomOf="@+id/q18"
         app:srcCompat="@drawable/oo" />
@@ -286,6 +357,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q28"
         app:layout_constraintTop_toBottomOf="@+id/q19"
         app:srcCompat="@drawable/oo" />
@@ -295,6 +367,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q29"
         app:layout_constraintTop_toBottomOf="@+id/q20"
         app:srcCompat="@drawable/oo" />
@@ -305,6 +378,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/q21"
         app:srcCompat="@drawable/oo" />
@@ -314,6 +388,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q31"
         app:layout_constraintTop_toBottomOf="@+id/q22"
         app:srcCompat="@drawable/oo" />
@@ -323,6 +398,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q32"
         app:layout_constraintTop_toBottomOf="@+id/q23"
         app:srcCompat="@drawable/oo" />
@@ -332,6 +408,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q33"
         app:layout_constraintTop_toBottomOf="@+id/q24"
         app:srcCompat="@drawable/oo" />
@@ -341,6 +418,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q34"
         app:layout_constraintTop_toBottomOf="@+id/q25"
         app:srcCompat="@drawable/oo" />
@@ -350,6 +428,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q35"
         app:layout_constraintTop_toBottomOf="@+id/q26"
         app:srcCompat="@drawable/oo" />
@@ -359,6 +438,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q36"
         app:layout_constraintTop_toBottomOf="@+id/q27"
         app:srcCompat="@drawable/oo" />
@@ -368,6 +448,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q37"
         app:layout_constraintTop_toBottomOf="@+id/q28"
         app:srcCompat="@drawable/oo" />
@@ -377,6 +458,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q38"
         app:layout_constraintTop_toBottomOf="@+id/q29"
         app:srcCompat="@drawable/oo" />
@@ -386,6 +468,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q39"
         app:layout_constraintTop_toBottomOf="@+id/q30"
         app:srcCompat="@drawable/oo" />
@@ -396,6 +479,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/q31"
         app:srcCompat="@drawable/oo" />
@@ -405,6 +489,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q41"
         app:layout_constraintTop_toBottomOf="@+id/q32"
         app:srcCompat="@drawable/oo" />
@@ -414,6 +499,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q42"
         app:layout_constraintTop_toBottomOf="@+id/q33"
         app:srcCompat="@drawable/oo" />
@@ -423,6 +509,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q43"
         app:layout_constraintTop_toBottomOf="@+id/q34"
         app:srcCompat="@drawable/oo" />
@@ -432,6 +519,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q44"
         app:layout_constraintTop_toBottomOf="@+id/q35"
         app:srcCompat="@drawable/oo" />
@@ -441,6 +529,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q45"
         app:layout_constraintTop_toBottomOf="@+id/q36"
         app:srcCompat="@drawable/oo" />
@@ -450,6 +539,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q46"
         app:layout_constraintTop_toBottomOf="@+id/q37"
         app:srcCompat="@drawable/oo" />
@@ -459,6 +549,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q47"
         app:layout_constraintTop_toBottomOf="@+id/q38"
         app:srcCompat="@drawable/oo" />
@@ -468,6 +559,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q48"
         app:layout_constraintTop_toBottomOf="@+id/q39"
         app:srcCompat="@drawable/oo" />
@@ -477,6 +569,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q49"
         app:layout_constraintTop_toBottomOf="@+id/q40"
         app:srcCompat="@drawable/oo" />
@@ -487,6 +580,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/q41"
         app:srcCompat="@drawable/oo" />
@@ -496,6 +590,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q51"
         app:layout_constraintTop_toBottomOf="@+id/q42"
         app:srcCompat="@drawable/oo" />
@@ -505,6 +600,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q52"
         app:layout_constraintTop_toBottomOf="@+id/q43"
         app:srcCompat="@drawable/oo" />
@@ -514,6 +610,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q53"
         app:layout_constraintTop_toBottomOf="@+id/q44"
         app:srcCompat="@drawable/oo" />
@@ -523,6 +620,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q54"
         app:layout_constraintTop_toBottomOf="@+id/q45"
         app:srcCompat="@drawable/oo" />
@@ -532,6 +630,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q55"
         app:layout_constraintTop_toBottomOf="@+id/q46"
         app:srcCompat="@drawable/oo" />
@@ -541,6 +640,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q56"
         app:layout_constraintTop_toBottomOf="@+id/q47"
         app:srcCompat="@drawable/oo" />
@@ -550,6 +650,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q57"
         app:layout_constraintTop_toBottomOf="@+id/q48"
         app:srcCompat="@drawable/oo" />
@@ -559,6 +660,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q58"
         app:layout_constraintTop_toBottomOf="@+id/q49"
         app:srcCompat="@drawable/oo" />
@@ -568,6 +670,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q59"
         app:layout_constraintTop_toBottomOf="@+id/q50"
         app:srcCompat="@drawable/oo" />
@@ -578,6 +681,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/q51"
         app:srcCompat="@drawable/oo" />
@@ -587,6 +691,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q61"
         app:layout_constraintTop_toBottomOf="@+id/q52"
         app:srcCompat="@drawable/oo" />
@@ -596,6 +701,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q62"
         app:layout_constraintTop_toBottomOf="@+id/q53"
         app:srcCompat="@drawable/oo" />
@@ -605,6 +711,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q63"
         app:layout_constraintTop_toBottomOf="@+id/q54"
         app:srcCompat="@drawable/oo" />
@@ -614,6 +721,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q64"
         app:layout_constraintTop_toBottomOf="@+id/q55"
         app:srcCompat="@drawable/oo" />
@@ -623,6 +731,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q65"
         app:layout_constraintTop_toBottomOf="@+id/q56"
         app:srcCompat="@drawable/oo" />
@@ -632,6 +741,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q66"
         app:layout_constraintTop_toBottomOf="@+id/q57"
         app:srcCompat="@drawable/oo" />
@@ -641,6 +751,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q67"
         app:layout_constraintTop_toBottomOf="@+id/q58"
         app:srcCompat="@drawable/oo" />
@@ -650,6 +761,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q68"
         app:layout_constraintTop_toBottomOf="@+id/q59"
         app:srcCompat="@drawable/oo" />
@@ -659,6 +771,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q69"
         app:layout_constraintTop_toBottomOf="@+id/q60"
         app:srcCompat="@drawable/oo" />
@@ -669,6 +782,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/q61"
         app:srcCompat="@drawable/oo" />
@@ -678,6 +792,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q71"
         app:layout_constraintTop_toBottomOf="@+id/q62"
         app:srcCompat="@drawable/oo" />
@@ -687,6 +802,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q72"
         app:layout_constraintTop_toBottomOf="@+id/q63"
         app:srcCompat="@drawable/oo" />
@@ -696,6 +812,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q73"
         app:layout_constraintTop_toBottomOf="@+id/q64"
         app:srcCompat="@drawable/oo" />
@@ -705,6 +822,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q74"
         app:layout_constraintTop_toBottomOf="@+id/q65"
         app:srcCompat="@drawable/oo" />
@@ -714,6 +832,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q75"
         app:layout_constraintTop_toBottomOf="@+id/q66"
         app:srcCompat="@drawable/oo" />
@@ -723,6 +842,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q76"
         app:layout_constraintTop_toBottomOf="@+id/q67"
         app:srcCompat="@drawable/oo" />
@@ -732,6 +852,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q77"
         app:layout_constraintTop_toBottomOf="@+id/q68"
         app:srcCompat="@drawable/oo" />
@@ -741,6 +862,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q78"
         app:layout_constraintTop_toBottomOf="@+id/q69"
         app:srcCompat="@drawable/oo" />
@@ -750,6 +872,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q79"
         app:layout_constraintTop_toBottomOf="@+id/q70"
         app:srcCompat="@drawable/oo" />
@@ -760,6 +883,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/q71"
         app:srcCompat="@drawable/oo" />
@@ -769,6 +893,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q81"
         app:layout_constraintTop_toBottomOf="@+id/q72"
         app:srcCompat="@drawable/oo" />
@@ -778,6 +903,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q82"
         app:layout_constraintTop_toBottomOf="@+id/q73"
         app:srcCompat="@drawable/oo" />
@@ -787,6 +913,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q83"
         app:layout_constraintTop_toBottomOf="@+id/q74"
         app:srcCompat="@drawable/oo" />
@@ -796,6 +923,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q84"
         app:layout_constraintTop_toBottomOf="@+id/q75"
         app:srcCompat="@drawable/oo" />
@@ -805,6 +933,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q85"
         app:layout_constraintTop_toBottomOf="@+id/q76"
         app:srcCompat="@drawable/oo" />
@@ -814,6 +943,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q86"
         app:layout_constraintTop_toBottomOf="@+id/q77"
         app:srcCompat="@drawable/oo" />
@@ -823,6 +953,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q87"
         app:layout_constraintTop_toBottomOf="@+id/q78"
         app:srcCompat="@drawable/oo" />
@@ -832,6 +963,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q88"
         app:layout_constraintTop_toBottomOf="@+id/q79"
         app:srcCompat="@drawable/oo" />
@@ -841,6 +973,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q89"
         app:layout_constraintTop_toBottomOf="@+id/q80"
         app:srcCompat="@drawable/oo" />
@@ -851,6 +984,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/q81"
         app:srcCompat="@drawable/oo" />
@@ -860,6 +994,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q91"
         app:layout_constraintTop_toBottomOf="@+id/q82"
         app:srcCompat="@drawable/oo" />
@@ -869,6 +1004,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q92"
         app:layout_constraintTop_toBottomOf="@+id/q83"
         app:srcCompat="@drawable/oo" />
@@ -878,6 +1014,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q93"
         app:layout_constraintTop_toBottomOf="@+id/q84"
         app:srcCompat="@drawable/oo" />
@@ -887,6 +1024,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q94"
         app:layout_constraintTop_toBottomOf="@+id/q85"
         app:srcCompat="@drawable/oo" />
@@ -896,6 +1034,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q95"
         app:layout_constraintTop_toBottomOf="@+id/q86"
         app:srcCompat="@drawable/oo" />
@@ -905,6 +1044,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q96"
         app:layout_constraintTop_toBottomOf="@+id/q87"
         app:srcCompat="@drawable/oo" />
@@ -914,6 +1054,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q97"
         app:layout_constraintTop_toBottomOf="@+id/q88"
         app:srcCompat="@drawable/oo" />
@@ -923,6 +1064,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q98"
         app:layout_constraintTop_toBottomOf="@+id/q89"
         app:srcCompat="@drawable/oo" />
@@ -932,9 +1074,262 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:tag="grid"
+        android:translationX="30dp"
         app:layout_constraintStart_toEndOf="@+id/q99"
         app:layout_constraintTop_toBottomOf="@+id/q90"
         app:srcCompat="@drawable/oo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="46dp"
+        android:tag="INFO"
+        android:text="A"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/q1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="172dp"
+        android:tag="INFO"
+        android:text="1"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:tag="INFO"
+        android:text="2"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:tag="INFO"
+        android:text="3"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:tag="INFO"
+        android:text="4"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:tag="INFO"
+        android:text="5"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:tag="INFO"
+        android:text="6"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:tag="INFO"
+        android:text="7"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:tag="INFO"
+        android:text="8"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:tag="INFO"
+        android:text="9"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:tag="INFO"
+        android:text="10"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:tag="INFO"
+        android:text="B"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/q2"
+        app:layout_constraintStart_toEndOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:tag="INFO"
+        android:text="C"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/q3"
+        app:layout_constraintStart_toEndOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:tag="INFO"
+        android:text="D"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/q4"
+        app:layout_constraintStart_toEndOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:tag="INFO"
+        android:text="E"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/q5"
+        app:layout_constraintStart_toEndOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:tag="INFO"
+        android:text="F"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/q6"
+        app:layout_constraintStart_toEndOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:tag="INFO"
+        android:text="G"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/q7"
+        app:layout_constraintStart_toEndOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:tag="INFO"
+        android:text="H"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/q8"
+        app:layout_constraintStart_toEndOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:tag="INFO"
+        android:text="I"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/q9"
+        app:layout_constraintStart_toEndOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:tag="INFO"
+        android:text="J"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/q10"
+        app:layout_constraintStart_toEndOf="@+id/textView9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
