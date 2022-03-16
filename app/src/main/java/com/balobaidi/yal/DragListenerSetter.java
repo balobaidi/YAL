@@ -1,14 +1,18 @@
 package com.balobaidi.yal;
 
 import android.content.ClipData;
+import android.graphics.drawable.Drawable;
 import android.view.DragEvent;
 import android.widget.ImageView;
 
+import androidx.annotation.IdRes;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class DragListenerSetter {
     private static ImageView [] ver, hor, inc_1, inc_2;
     private static final String IMAGWVIEW_TAG = "tank_permanent";
+
+    public static Drawable Dragged_Unit_Ref;
 
     public static void setDragListener(ConstraintLayout root, Coor coor, CoorToView coorToView) {
         int childCount = root.getChildCount();
@@ -22,7 +26,10 @@ public class DragListenerSetter {
                 switch (e.getAction()) {
 
                     case DragEvent.ACTION_DRAG_ENTERED:
-                        ((ImageView) root.getChildAt(finalI)).setImageResource(android.R.color.holo_blue_light);
+                        if (!((ImageView) root.getChildAt(finalI)).getTag().equals("grid")) {
+                            return false;
+                        }
+                        ((ImageView) root.getChildAt(finalI)).setForeground( Dragged_Unit_Ref);
 
                         int x, y;
                         x = coor.getXCoor((ImageView) v);
@@ -41,7 +48,10 @@ public class DragListenerSetter {
                         break;
 
                     case DragEvent.ACTION_DRAG_EXITED:
-                        ((ImageView) root.getChildAt(finalI)).setImageResource(android.R.color.holo_orange_light);
+                        ((ImageView) root.getChildAt(finalI)).setForeground(null);
+
+                        ((ImageView) v).setTag("grid");
+                        ((ImageView) v).setImageResource(R.drawable.oo);
 
                         resetPossibilities(ver);
                         resetPossibilities(hor);
@@ -51,16 +61,7 @@ public class DragListenerSetter {
                         break;
 
                     case DragEvent.ACTION_DROP:
-                        ClipData.Item item = e.getClipData().getItemAt(0);
-                        CharSequence dragData = item.getText();
-                        if (dragData.equals(IMAGWVIEW_TAG)) {
-                            ((ImageView) v).setImageResource(R.drawable.tank);
-                            ((ImageView) v).setTag(IMAGWVIEW_TAG);
-                        }
-                        resetPossibilities(ver);
-                        resetPossibilities(hor);
-                        resetPossibilities(inc_1);
-                        resetPossibilities(inc_2);
+
                 }
 
                 return true;
@@ -77,17 +78,17 @@ public class DragListenerSetter {
 
         if (all){
             for (ImageView img : array) {
-                img.setTag("tank_temp");
-                img.setImageResource(android.R.color.holo_green_light);
+                img.setForeground(Dragged_Unit_Ref);
+                img.setTag("temp");
             }
         }
     }
 
     private static void resetPossibilities(ImageView [] array) {
         for (ImageView img : array) {
-            if (img != null && img.getTag().equals("tank_temp")) {
+            if (img != null && img.getTag().equals("temp")) {
+                img.setForeground(null);
                 img.setTag("grid");
-                img.setImageResource(R.drawable.oo);
             }
         }
     }

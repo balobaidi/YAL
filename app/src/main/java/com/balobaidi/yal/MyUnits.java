@@ -12,24 +12,28 @@ import android.widget.ImageView;
 
 public class MyUnits {
 
-    private ImageView imageView;
+    private ImageView unitImageView;
     private String tag;
     private int count;
+    private Drawable shadow;
 
-    public MyUnits(ImageView imageView, int count, String tag) {
-        this.imageView = imageView;
+    public MyUnits(ImageView imageView, int count, String tag, Drawable shadowImg) {
+        this.unitImageView = imageView;
         this.tag = tag;
         this.count = count;
+        this.shadow = shadowImg;
 
         attachDragListener();
     }
 
     private void attachDragListener() {
-        imageView.setOnLongClickListener(v-> {
-            ClipData.Item item = new ClipData.Item((CharSequence) imageView.getTag());
-            ClipData dragData = new ClipData((CharSequence) imageView.getTag(), new String[] {ClipDescription.MIMETYPE_TEXT_PLAIN}, item);
+        unitImageView.setOnLongClickListener(v-> {
+            DragListenerSetter.Dragged_Unit_Ref = shadow;
 
-            View.DragShadowBuilder myShadow = new MyDragShadowBuilder(imageView);
+            ClipData.Item item = new ClipData.Item((CharSequence) unitImageView.getTag());
+            ClipData dragData = new ClipData((CharSequence) unitImageView.getTag(), new String[] {ClipDescription.MIMETYPE_TEXT_PLAIN}, item);
+
+            View.DragShadowBuilder myShadow = new MyDragShadowBuilder(unitImageView);
             v.startDragAndDrop(dragData, myShadow, null, 0);
 
             return true;

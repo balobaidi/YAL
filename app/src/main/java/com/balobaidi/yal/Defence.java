@@ -57,11 +57,11 @@ public class Defence extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        MyUnits tank = new MyUnits(findViewById(R.id.TANK), 5, "tank");
-        MyUnits jet = new MyUnits(findViewById(R.id.JET), 5, "jet");
-        MyUnits canon = new MyUnits(findViewById(R.id.CANON), 3, "canon");
-        MyUnits frigate = new MyUnits(findViewById(R.id.FRIGATE), 3, "frigate");
-        MyUnits submarine = new MyUnits(findViewById(R.id.SUBMARINE), 2, "submarine");
+        MyUnits tank = new MyUnits(findViewById(R.id.TANK), 5, "tank", getDrawable(R.drawable.tank));
+        MyUnits jet = new MyUnits(findViewById(R.id.JET), 5, "jet", getDrawable(R.drawable.jet));
+        MyUnits canon = new MyUnits(findViewById(R.id.CANON), 3, "canon", getDrawable(R.drawable.canon));
+        MyUnits frigate = new MyUnits(findViewById(R.id.FRIGATE), 3, "frigate", getDrawable(R.drawable.frigate));
+        MyUnits submarine = new MyUnits(findViewById(R.id.SUBMARINE), 2, "submarine", getDrawable(R.drawable.submarine));
     }
 
     private void listenToUserDocument(DocumentReference userDocumentPath) {
